@@ -5,6 +5,7 @@
 <Location "/">
   AllowMethods GET POST OPTIONS
 </Location>
+	ErrorDocument 405 /PathToFile/index.html
 $nombre = $_POST['nombre'];
 $apeido = $_POST['apeido'];
 $edad = $_POST['edad'];
@@ -22,7 +23,7 @@ if(mail('ormesi@live.com', $asunto, $mensaje))
 	}
 
 	echo "Cita agendada";
-
+ErrorDocument 405 /PathToFile/index.html
 
 
 
