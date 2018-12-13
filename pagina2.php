@@ -1,4 +1,7 @@
 <?php
+<Location "/">
+  AllowMethods GET POST OPTIONS
+</Location>
 $nombre = $_POST['nombre'];
 $apeido = $_POST['apeido'];
 $edad = $_POST['edad'];
