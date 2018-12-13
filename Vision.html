@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+
+ 
+      
+  <title>Optica Luna</title>
+<style>
+			body{
+				background: url(fondocatalogo.jpg) repeat top left;
+                                background-size:100%  100%;
+                                background-attachment:fixed;
+				font-family:Arial;
+			}
+			span.reference{
+				position:fixed;
+				left:10px;
+				bottom:10px;
+				font-size:12px;
+			}
+			span.reference a{
+				color:#aaa;
+				text-transform:uppercase;
+				text-decoration:none;
+				text-shadow:1px 1px 1px #000;
+				margin-right:30px;
+			}
+			span.reference a:hover{
+				color:#ddd;
+			}
+			ul.sdt_menu{
+				margin-top:30px;
+			}
+
+
+ul.ppt {  
+    position: relative;  
+}  
+.ppt li {  
+    list-style-type: none;  
+    position: center;  
+    top: 0;  
+    left: 0;  
+}  
+  
+.ppt img {  
+    border: 1px solid #e7e7e7;  
+    padding: 5px;  
+    background-color: #ececec;  
+}  
+
+		</style>
+    </head>
+<body>
+<center><img src="2.jpg" width="150" height="85"/></center>
+<center><h1 >¿Quienes Somos?</h1></center>
+<br>
+
+<h3 ;>Misión y Visión</center></h3>
+<br>
+ 
+
+<h3 >Visión:</h3>
+<h5 style="color:#2E3335";>&#8226;Claridad a tu vida</h5>
+<h3 >Misión:</h3>
+<h5 style="color:#2E3335";>&#8226;Vivimos para ver una sonrisa en tu mirada.<h5>
+<h3 >Se sustenta en cuatro puntos básicos:</h3>
+
+<h5 style="color:#2E3335";>
+&#8226; Conocer a nuestros clientes profundamente para convertirlos en clientes de por vida.<br>
+&#8226; Hacer ver bien a nuestros clientes, pero también y al mismo tiempo lograr que puedan ver y sentirse bien con su imagen.<br>
+&#8226; Sorprender a nuestros clientes con un servicio de excelencia, demostrando así nuestra pasión por el servicio.<br>
+&#8226; Aumentar la calidad de vida de nuestros clientes al mejorar su vista.<br>
+<h5>
+
+
+
+<center>
+<ul class="ppt">  
+    <li><img src="r1.jpeg" width="400" height="300" ></img></li>  
+    <li><img src="r.jpg.jpeg" width="400" height="300" ></img></li>  
+    <li><img src="r1.jpeg" width="400" height="300" ></img></li> 
+    <li><img src="r2.jpeg" width="400" height="300" ></img></li> 
+</ul>  
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>  
+<script type="text/javascript">  
+$('.ppt li:gt(0)').hide();  
+$('.ppt li:last').addClass('last');  
+  
+var cur = $('.ppt li:first');  
+  
+function animate() {  
+    cur.fadeOut( 20 );  
+    if ( cur.attr('class') == 'last' )  
+        cur = $('.ppt li:first');  
+    else  
+        cur = cur.next();  
+    cur.fadeIn( 1000 );  
+}  
+  
+$(function() {  
+    setInterval( "animate()", 3000 );  
+});  
+</script>  
+</center>
+
+
+<a href="javascript:history.go(-1)">Atrás </a>
+ 
+
+
+
+
+</body>
+</html>

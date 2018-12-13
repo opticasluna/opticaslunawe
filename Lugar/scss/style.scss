@@ -1,0 +1,159 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600';
+
+$font:'Source Sans Pro', sans-serif;
+$primary:#2F54C9;
+$secondary:#122E91;
+$cubic:all .5s cubic-bezier(0.77, 0, 0.175, 1);
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie);
+}
+@mixin gradientAngle($start-color, $end-color, $angle) { 
+    background: $start-color;
+    background: -webkit-linear-gradient($angle, $start-color, $end-color);
+    background: linear-gradient($angle, $start-color, $end-color);
+}
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    -o-transform: $transforms;
+    transform: $transforms;
+}
+@mixin transformOrigin($x,$y) {
+    -webkit-transform-origin: $x $y;
+    -moz-transform-origin: $x $y;
+    -ms-transform-origin: $x $y;
+    -o-transform-origin: $x $y;
+    transform-origin: $x $y;
+}
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+@mixin filter($filter-type,$filter-amount) { 
+    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+    -o-filter: $filter-type+unquote('(#{$filter-amount})');
+    filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  color:#FFF;
+  text-decoration:none;
+}
+
+
+html, body{
+    height:100%;
+    width: 100%;
+}
+
+body {
+  padding:0px;
+  margin:0;
+  font-family:$font;
+  @include gradientAngle(#150633,lighten(#150633,5%),90deg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.flex {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.app {
+  @include gradientAngle($secondary,$primary,0deg);
+  width:370px;
+  text-align:center;
+  overflow:hidden;
+  height:650px;
+  position:relative;
+  box-shadow: 0 19px 48px rgba(0,0,0,0.22), 0 15px 32px rgba(0,0,0,0.15);
+  .title {
+    font-weight:600;
+    font-size:14px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.7);
+    position:relative;
+    z-index:9999;
+  }
+  .apptext {
+    position:absolute;
+    bottom:30px;
+    padding:0px 30px;
+    text-align:left;
+    .mercury,.jupiter,.uranus {
+      display:none;
+    }
+    h2 {
+      color:#FFF;
+      margin-bottom:5px;
+    }
+    p {
+      font-weight:300;
+      color:rgba(255,255,255,0.8);
+    }
+  }
+  svg {
+    min-width:600px;
+    position:absolute;
+    top:0px;
+    left:-80px;
+    #planetone,#planettwo,#planetthree {
+      @include transition($cubic);
+    }
+    &.planetone {
+      #planetone {
+        @include transform(scale(1.7));
+        transform-origin:center center;
+      }
+      #planettwo,#planetthree {
+        @include transform(scale(.6));
+        transform-origin:center;
+        @include opacity(.3);
+      }
+    }
+    &.planettwo {
+      #planettwo {
+        @include transform(scale(2));
+        transform-origin:center;
+      }
+      #planetone,#planetthree {
+        @include transform(scale(.6));
+        transform-origin:center;
+        @include opacity(.3);
+      }
+    }
+    &.planetthree {
+      #planetthree {
+        @include transform(scale(2));
+        transform-origin:center;
+      }
+      #planetone,#planettwo {
+        @include transform(scale(.6));
+        transform-origin:center;
+        @include opacity(.3);
+      }
+    }
+  }
+}

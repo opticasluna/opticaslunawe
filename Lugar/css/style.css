@@ -1,0 +1,127 @@
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600";
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}.flex {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  background: #122E91;
+  background: -webkit-linear-gradient(0deg, #122E91, #2F54C9);
+  background: linear-gradient(0deg, #122E91, #2F54C9);
+  width: 370px;
+  text-align: center;
+  overflow: hidden;
+  height: 650px;
+  position: relative;
+  box-shadow: 0 19px 48px rgba(0, 0, 0, 0.22), 0 15px 32px rgba(0, 0, 0, 0.15);
+}
+.app .title {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  z-index: 9999;
+}
+.app .apptext {
+  position: absolute;
+  bottom: 30px;
+  padding: 0px 30px;
+  text-align: left;
+}
+.app .apptext .mercury, .app .apptext .jupiter, .app .apptext .uranus {
+  display: none;
+}
+.app .apptext h2 {
+  color: #FFF;
+  margin-bottom: 5px;
+}
+.app .apptext p {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+.app svg {
+  min-width: 600px;
+  position: absolute;
+  top: 0px;
+  left: -80px;
+}
+.app svg #planetone, .app svg #planettwo, .app svg #planetthree {
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.app svg.planetone #planetone {
+  -webkit-transform: scale(1.7);
+  -moz-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  -o-transform: scale(1.7);
+  transform: scale(1.7);
+  transform-origin: center center;
+}
+.app svg.planetone #planettwo, .app svg.planetone #planetthree {
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+  transform-origin: center;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.app svg.planettwo #planettwo {
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  transform-origin: center;
+}
+.app svg.planettwo #planetone, .app svg.planettwo #planetthree {
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+  transform-origin: center;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.app svg.planetthree #planetthree {
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  transform-origin: center;
+}
+.app svg.planetthree #planetone, .app svg.planetthree #planettwo {
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);
+  transform-origin: center;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}

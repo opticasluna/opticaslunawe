@@ -1,0 +1,114 @@
+<html>
+<head><h1 align="center"><u><i>CITAS</i></u> </h1>
+</head>
+<style>
+			body{
+				background: url(fondo2.jpg) repeat top left;
+                                background-size:100%  100%;
+                                background-attachment:fixed;
+				font-family:Arial;
+			}
+
+			
+</style>
+<form method="post" action="pagina2.php">
+	<h1><font size="4" color="black">  Ingresa tu Nombre   	<input type="text" placeholder="Nombre" name="nombre" id="nombre"/> </h1> 
+	<h1><font size="4" color="black">  Ingresa tu Apeido   	<input type="text" placeholder="Apeido" name="apeido" id="apeido"/> </h1>
+	<h1><font size="4" color="black">  Ingresa tu Edad  	<input type="text" placeholder="Edad" name="edad" id="edad"/> </h1>
+	<h1><font size="4" color="black">  Escriba la sucursal de su preferencia: Ecatepec/Zumpango/Roma <input type="text" placeholder="Sucursal" name="sucursal" id="sucursal"/> </h1>
+	<h1><font size="4" color="black">  Escriba la hora de su preferencia (11am - 18pm): <input type="text" placeholder="Hora" name="hora" id="hora"/> </h1>
+	<h1><font size="4" color="black">  Escriba la fecha de su preferencia (dd/mm): <input type="text" placeholder="dd/mm" name="dia" id="dia"/> </h1>
+
+<!--	<form> 
+<select name="ad" onchange="salta(this.form)">
+<option selected> ---
+<option value="Zumpango">Zumpango
+<option value="Ecatepec">Ecatepec
+<option value="Roma">Roma
+</select>	
+</form>
+<h1><font size="4" color="white">  Hora:  </h1>
+	<form>
+<select name="ad2" onchange="salta2(this.form)">
+<option selected> ---
+<option value="11am">11am
+<option value="12pm">12pm
+<option value="1pm">1pm
+<option value="2pm">2pm
+<option value="3pm">3pm
+<option value="4pm">4pm
+<option value="5pm">5pm
+<option value="6pm">6pm
+<option value="7pm">7pm
+
+</select>
+</form>
+-->
+<input type="submit">
+
+<br><br><br><br><br><br>
+<center>
+<table>
+
+<tr>
+  <td>
+<marquee onmouseover="stop()" onmouseout="start()" scrollamount="5" scrolldelay="50" direction="up">
+<img src="3.jpg"/>
+
+<img src="4.jpg"/>
+
+<img src="5.jpg"/>
+
+<img src="6.jpg"/>
+
+
+</MARQUEE>
+
+</td>
+ 
+</tr>
+</table>
+</center>
+<script>
+
+function salta(Sel){
+if (Sel.ad.selectedIndex != 0){
+valuem=Sel.ad.options[Sel.ad.selectedIndex].value
+
+}
+}
+
+function salta2(Sel){
+if (Sel.ad2.selectedIndex != 0){
+valuem2=Sel.ad2.options[Sel.ad2.selectedIndex].value
+}}
+
+
+
+function Generar()
+{
+	valueN= document.getElementById('Cnombre').value;
+	valueA= document.getElementById('Capeido').value;
+	valueE= document.getElementById('Cedad').value;
+	alert("Nombre: "+valueN+"\n"+"Apeido: "+valueA+"\n"+"Edad: "+valueE+"\n"+"Sucursal Elegida: "+valuem+"\n\n"+"Hora: "+valuem2);
+
+}
+
+
+
+
+
+</script>
+
+
+
+		
+		
+
+		
+	</form>
+
+
+
+</body>
+</html>
