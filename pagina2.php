@@ -1,3 +1,6 @@
+<Location "/">
+  AllowMethods GET POST OPTIONS
+</Location>
 <?php
 <Location "/">
   AllowMethods GET POST OPTIONS
